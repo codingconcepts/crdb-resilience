@@ -1,0 +1,17 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: IOChaos
+metadata:
+  name: io-latency-example
+  namespace: chaos-mesh
+spec:
+  action: latency
+  mode: one
+  selector:
+    namespaces: [crdb]
+    labelSelectors:
+      statefulset.kubernetes.io/pod-name: REPLACE
+  volumePath: /cockroach/cockroach-data
+  path: /cockroach/cockroach-data/**/*
+  delay: 50ms
+  percent: 100
+  duration: 2m
