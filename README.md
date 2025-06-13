@@ -17,7 +17,7 @@ Create the GKE cluster
 
 ```sh
 # Set the name of the cluster.
-export CLUSTER_NAME="crdb-hidden-road"
+export CLUSTER_NAME="crdb-resilience-testing"
 
 # Get second from latest version (to allow for cluster upgrade testing later).
 GKE_VERSION=$(gcloud container get-server-config --zone=europe-west2-a --format="value(validMasterVersions)" | tr ';' '\n' | sed -n '2p')
