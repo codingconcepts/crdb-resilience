@@ -1,4 +1,4 @@
-module github.com/codingconcepts/demo-hidden-road
+module github.com/codingconcepts/crdb-resilience
 
 go 1.23.4
 
